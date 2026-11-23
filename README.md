@@ -52,8 +52,18 @@ with a matching configured policy are replayed.
 For example, append `--har path/to/capture.har` and/or
 `--zap path/to/zap-messages.json` to the explorer command to include traffic.
 
-Open <http://127.0.0.1:8000/web/> and select an endpoint node. The right panel
-shows the expected policy and each identity's observed response.
+Open <http://127.0.0.1:8000/web/> for the Veil security dashboard. Select a
+saved target or one of 12 fictional sample websites from the dropdown, filter the endpoint graph, and select
+an endpoint or finding to inspect its policy and identity response evidence.
+The bundled assessment loads automatically when `artifacts/demo-report.json`
+exists. **Import report** adds another explorer JSON assessment to the target
+dropdown for the current browser session.
+
+**View report** opens an executive summary, scope, findings, remediation,
+evidence hashes, and endpoint inventory. Download the original evidence JSON
+or use **Print / Save PDF** to export the assessment. Sample websites use synthetic offline data and reserved `.example` domains; no requests are sent to them. The frontend displays
+saved assessments; run the CLI to generate a new scan. It does not scan arbitrary
+public websites or start live scans from the browser.
 
 Run the tests:
 
